@@ -1528,7 +1528,7 @@ body {
     cursor: pointer;
     transition-duration: .3s;
     transition-timing-function: ease-in-out;
-    transition-property: background;
+    transition-property: #414141;
 }
 
 .footer__form:focus {
@@ -1572,7 +1572,7 @@ body {
     color: #CACACA;
     letter-spacing: 1.5px;
     background-color: #414141;
-    transition-property: background;
+    transition-property: #414141;
 }
 
 .footer__form-button {
