@@ -27,8 +27,8 @@
                 </svg>
 
             </label>
-            <div class="head__logo">
-                <img src="img/Logo-top.png" alt="do not work">
+            <div class="flex">
+                <img class="head__logo" src="img/Logo-top.png" alt="do not work">
             </div>
 
             <nav class="flex head__list head__burger-button">
@@ -40,11 +40,11 @@
                             О нас</a>
                     </li>
 
-                    
-                        <li class="flex head__list-item">
-                            <a href="#projects">
+
+                    <li class="flex head__list-item">
+                        <a href="#projects">
                             Проекты
-                    </a>
+                        </a>
                     </li>
 
                     <li class="flex head__list-item">
@@ -81,7 +81,7 @@
     </header>
 
     <main class="main__site">
-        
+
         <section class="container">
             <div class="main__header-img">
                 <div class="flex column">
@@ -204,8 +204,9 @@
         </section>
 
         <section id="main__how-we-work" class="container">
+
             <div class="main__how-we-work">
-                <div>
+
                     <h2 class="flex main__how-we-work-title">
                         Как мы&nbsp;работаем
                     </h2>
@@ -215,40 +216,28 @@
                             <a href="#">
                                 1 шаг
                             </a>
-                            <!-- <button class="flex main__how-we-work-steps">
-                                1 шаг
-                            </button> -->
                         </li>
 
                         <li class="flex main__how-we-work-step">
-                            <a href="#" >
+                            <a href="#">
                                 2 шаг
                             </a>
-                            <!-- <button class="main__how-we-work-steps">
-                                2 шаг
-                            </button> -->
                         </li>
 
                         <li class="flex main__how-we-work-step">
                             <a href="#">
                                 3 шаг
                             </a>
-                            <!-- <button class="main__how-we-work-steps">
-                                3 шаг
-                            </button> -->
                         </li>
-                        
+
                         <li class="flex main__how-we-work-step">
                             <a href="#">
                                 4 шаг
                             </a>
-                            <!-- <button class="main__how-we-work-steps">
-                                4 шаг
-                            </button> -->
+                            
                         </li>
                     </ul>
                 </div>
-            </div>
 
             <div class="flex main__how-we-work-text-and-img">
                 <div class="column">
@@ -399,8 +388,9 @@
 
     </main>
 
-    <footer class="flex footer__main-content">
-        
+    <footer class="footer">
+        <div class="flex footer__main-content">
+
             <div class="footer__main">
 
                 <div class="flex footer__logo">
@@ -480,50 +470,50 @@
             </div>
 
             <div class="flex">
-                <div class="flex column footer-form-items">
+                <div class=" column footer-form-items">
                     <h2 class="flex footer__title">
                         Оставить заявку
                     </h2>
-                    <div class="flex column">
-                        <form class="flex column footer__form-text" action="https://jsonplaceholder.typicode.com/posts"
-                            method="POST" enctype="application/x-www-form-urlencoded">
 
+                    <form class=" column footer__form-text" action="https://jsonplaceholder.typicode.com/posts"
+                        method="POST" enctype="application/x-www-form-urlencoded">
+
+                        <div>
+                            <input class="footer__form" type="text" name="name"
+                                placeholder="Фамилия, имя и&nbsp;отчество*" required>
+                        </div>
+
+                        <div>
+                            <input class="footer__form" type="email" name="email" placeholder="E-mail*" required>
+                        </div>
+
+
+                        <div class="footer__form-message">
+                            <textarea class="footer__form-message-text" name="text" id="text"
+                                placeholder="Сообщение"></textarea>
+                        </div>
+
+                        <div class="flex">
                             <div>
-                                <input class="footer__form" type="text" name="name"
-                                    placeholder="Фамилия, имя и&nbsp;отчество*" required>
+                                <button class="flex footer__form-button" type="submit" name="submit"
+                                    value="Отправить данные">
+                                    <span class="footer__button-text">Отправить данные</span>
+                                </button>
                             </div>
 
-                            <div>
-                                <input class="footer__form" type="email" name="email" placeholder="E-mail*" required>
+                            <div class="flex footer__send-data">
+                                <input type="checkbox" name="date" value="yes" required /><span
+                                    class="flex footer__send-data-text"> Согласен
+                                    на&nbsp;обработку данных</span>
                             </div>
+                        </div>
+                    </form>
 
-
-                            <div class="footer__form-message">
-                                <textarea class="footer__form-message-text" name="text" id="text"
-                                    placeholder="Сообщение"></textarea>
-                            </div>
-
-                            <div class="flex">
-                                <div>
-                                    <button class="flex footer__form-button" type="submit" name="submit"
-                                        value="Отправить данные">
-                                        <span class="footer__button-text">Отправить данные</span>
-                                    </button>
-                                </div>
-
-                                <div class="flex footer__send-data">
-                                    <input type="checkbox" name="date" value="yes" required /><span
-                                        class="flex footer__send-data-text"> Согласен
-                                        на&nbsp;обработку данных</span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
 
 
                 <div class="flex">
-                    <p class="flex footer__text">
+                    <p class="footer__text">
                         Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
                         простого
                         факта: разбавленное
@@ -536,7 +526,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
 
 </body>
