@@ -385,10 +385,9 @@
                 </ul>
             </div>
         </section>
-
     </main>
 
-    <footer class="flex footer__main-content ">
+    <footer class="flex footer__main-content">
         <div class="column">
 
             <img class="footer__logo" src="img/Logo-footer.png" alt="Do not work">
@@ -417,7 +416,7 @@
                 </li>
             </ul>
 
-            <ul class="flex footer__social list-reset footer__social-item">
+            <ul class="flex footer__social list-reset footer__social-items">
 
                 <li class="flex footer__social-item">
                     <a href="#" class="footer__social-link-fb">
@@ -464,30 +463,33 @@
             </h2>
 
             <form class="footer__form-text" action="https://jsonplaceholder.typicode.com/posts" method="POST"
-                enctype="application/x-www-form-urlencoded"></form>
+                enctype="application/x-www-form-urlencoded">
 
 
-            <input class="footer__form" type="text" name="name" placeholder="Фамилия, имя и&nbsp;отчество*" required>
+                <input class="footer__form" type="text" name="name" placeholder="Фамилия, имя и&nbsp;отчество*"
+                    required>
 
-            <input class="footer__form" type="email" name="email" placeholder="E-mail*" required>
+                <input class="footer__form" type="email" name="email" placeholder="E-mail*" required>
 
-            <textarea class="footer__form-message footer__form-message-text" name="text" id="text"
-                placeholder="Сообщение"></textarea>
+                <textarea class="footer__form-message footer__form-message-text" name="text" id="text"
+                    placeholder="Сообщение"></textarea>
 
 
-            <button class="flex footer__form-button" type="submit" name="submit" value="Отправить данные">
-                <span class="footer__button-text">Отправить данные</span>
-            </button>
+                <button class="flex footer__form-button" type="submit" name="submit" value="Отправить данные">
+                    <span class="footer__button-text">Отправить данные</span>
+                </button>
 
-            <div class="flex footer__send-data">
-                <input type="checkbox" name="date" value="yes" required />
-                <span class="flex footer__send-data-text"> Согласен
-                    на&nbsp;обработку данных</span>
-            </div>
+
+                <div class="footer__send-data">
+                    <input type="checkbox" name="date" value="yes" required />
+                    <span class="footer__send-data-text"> Согласен
+                        на&nbsp;обработку данных</span>
+                </div>
+            </form>
         </div>
 
-        <div class="flex">
-            <p class="footer__text">
+        <div class="flex footer__text">
+            <span>
                 Высокий уровень вовлечения представителей целевой аудитории является четким доказательством
                 простого
                 факта: разбавленное
@@ -496,7 +498,7 @@
                 консультация
                 с&nbsp;широким активом обеспечивает широкому кругу (специалистов) участие в&nbsp;формировании
                 стандартных подходов.
-            </p>
+            </span>
         </div>
 
     </footer>
