@@ -1303,6 +1303,16 @@ body {
     align-self: center;
 }
 
+@media (max-width:3840px) {
+    .main__faq-questin-item-link {
+        width: 1770px;
+    }
+
+    .main__faq-question-item {
+        width: 1770px;
+    }
+}
+
 @media (max-width:1920px) {
     .main__faq-questin-item-link {
         width: 100%;
@@ -1316,6 +1326,10 @@ body {
 }
 
 @media (max-width: 1024px) {
+    .main__faq-questin-item-link {
+        width: 100%;
+    }
+
     .main__faq-title {
         width: 693px;
         height: 59px;
@@ -1630,7 +1644,7 @@ body {
 
 @media (max-width:3840px) {
     .footer__main-content {
-        max-width: 100%;
+        max-width: 1920px;
     }
 }
 
@@ -1701,11 +1715,13 @@ body {
         margin-bottom: 16px;
         border-bottom: 1px solid #595959;
     }
+
     .footer__logo {
         width: 131px;
         height: 42px;
         align-self: center;
     }
+
     .footer__form {
         max-width: 290px;
     }
