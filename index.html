@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="flex head">
+    <header class="flex head container">
         <div class="flex header__nav">
 
             <input class="head__burger-input" type="checkbox" id="menu-toggle">
@@ -387,7 +387,7 @@
         </section>
     </main>
 
-    <footer class="flex footer__main-content">
+    <footer class="flex footer__main-content container">
         <div class="column">
 
             <img class="footer__logo" src="img/Logo-footer.png" alt="Do not work">
@@ -480,10 +480,10 @@
                 </button>
 
 
-                <div class="footer__send-data">
-                    <input type="checkbox" name="date" value="yes" required />
-                    <span class="footer__send-data-text"> Согласен
-                        на&nbsp;обработку данных</span>
+                <div>
+                    <input type="checkbox" class="footer__send-data" id="date" name="date" value="yes" checked="cheched" required />
+                    <label for="date" class="footer__send-data-text"> Согласен
+                        на&nbsp;обработку данных</label> 
                 </div>
             </form>
         </div>
