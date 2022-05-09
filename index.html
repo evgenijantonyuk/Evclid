@@ -12,23 +12,28 @@
 </head>
 
 <body>
-
     <header class="flex head container">
+
         <div class="flex header__nav">
 
             <input class="head__burger-input" type="checkbox" id="menu-toggle">
 
             <label class="head__burger-list-items" for="menu-toggle">
-                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
+                <!-- <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
                     viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink">
                     <path
                         d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                </svg>
-
+                </svg> -->
             </label>
+            
             <div class="flex">
                 <img class="head__logo" src="img/Logo-top.png" alt="do not work">
+            </div>
+            <div class="burger active">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
 
             <nav class="flex head__list head__burger-button">
@@ -39,7 +44,6 @@
                         <a href="#about-us">
                             О нас</a>
                     </li>
-
 
                     <li class="flex head__list-item">
                         <a href="#projects">
@@ -290,7 +294,7 @@
 
                     <li class="flex main__faq-question-item">
                         <a href="#" class="flex main__faq-questin-item-link">
-                            <span>
+                            <span class="main__faq-questin-text">
                                 Из&nbsp;чего
                                 формируется
                                 конечная стоимость проекта?
@@ -310,7 +314,7 @@
 
                     <li class="flex main__faq-question-item">
                         <a href="#" class="flex main__faq-questin-item-link">
-                            <span>
+                            <span class="main__faq-questin-text">
                                 У&nbsp;меня есть свой
                                 проект.
                                 Сможем&nbsp;ли мы&nbsp;его доработать&nbsp;/ реализовать?
@@ -329,7 +333,7 @@
 
                     <li class="flex main__faq-question-item">
                         <a href="#" class="flex main__faq-questin-item-link">
-                            <span>
+                            <span class="main__faq-questin-text">
                                 Я&nbsp;выбираю между
                                 разными
                                 компаниями. В&nbsp;чём ваше отличие?
@@ -348,7 +352,7 @@
 
                     <li class="flex main__faq-question-item">
                         <a href="#" class="flex main__faq-questin-item-link">
-                            <span>
+                            <span class="main__faq-questin-text">
                                 Могу&nbsp;ли я&nbsp;
                                 делегировать
                                 вам работу&nbsp;/ согласование с&nbsp;подрядчиком&nbsp;/ организацией?
@@ -367,7 +371,7 @@
 
                     <li class="flex main__faq-question-item">
                         <a href="#" class="flex main__faq-questin-item-link">
-                            <span>
+                            <span class="main__faq-questin-text">
                                 Могу&nbsp;ли я&nbsp;вернуть
                                 деньги на&nbsp;каком-либо из&nbsp;этапов работ?
                             </span>
@@ -505,6 +509,7 @@
 
     </footer>
 
+    <script  src="index.js"></script>
 </body>
 
 </html>
