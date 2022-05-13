@@ -19,68 +19,89 @@
             <input class="head__burger-input" type="checkbox" id="menu-toggle">
 
             <label class="head__burger-list-items" for="menu-toggle">
-                <!-- <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1"
-                    viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <path
-                        d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z" />
-                </svg> -->
             </label>
-            
+
             <div class="flex">
                 <img class="head__logo" src="img/Logo-top.png" alt="do not work">
             </div>
-            <div class="burger active">
+            <div class="flex burger">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <nav class="flex head__list head__burger-button">
+            <nav class="flex head__list">
 
-                <ul class="flex list-reset head__list-items">
+                <ul class="flex list-reset head__list_items">
 
-                    <li class="flex head__list-item">
+                    <li class="head__list-item">
                         <a href="#about-us">
                             О нас</a>
                     </li>
 
-                    <li class="flex head__list-item">
+                    <li class="head__list-item">
                         <a href="#projects">
                             Проекты
                         </a>
                     </li>
 
-                    <li class="flex head__list-item">
+                    <li class="head__list-item">
                         <a href="#stadies">
                             Этапы</a>
                     </li>
 
-                    <li class="flex  head__list-item">
+                    <li class="head__list-item" id="open_search_form">
                         <a href="#feedback">
                             Отзывы</a>
                     </li>
 
-                    <li class="flex head__list-item">
+                    <li class="head__list-item">
                         <a href="#contacts">
                             Контакты
                         </a>
                     </li>
                 </ul>
-
-                <div class="flex head__search-icon">
-                    <form action="#">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="7.56126" height="1.89031"
-                                transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)"
-                                fill="#333333" />
-                            <path
-                                d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
-                                stroke="#333333" stroke-width="2" />
-                        </svg>
-                    </form>
-                </div>
             </nav>
+
+            <button class="flex head__search_icon" id="open-search-form">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="7.56126" height="1.89031"
+                        transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
+                    <path
+                        d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                        stroke="#333333" stroke-width="2" />
+                </svg>
+            </button>
+
+            <!-- форма поиска -->
+
+            <form action="#" class="flex  onclick head__search_form" id="head__search-form">
+
+                <input class="head__search_form_input" type="text" placeholder="Что будем искать?">
+
+                <button class="head__search_form_send" id="head__search_form-send" type="submit">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="7.56126" height="1.89031"
+                            transform="matrix(0.713342 0.700816 -0.713342 0.700816 18.6062 17.3762)" fill="#333333" />
+                        <path
+                            d="M20.9303 10.7726C20.9303 16.1533 16.4855 20.5452 10.9652 20.5452C5.44478 20.5452 1 16.1533 1 10.7726C1 5.39198 5.44478 1 10.9652 1C16.4855 1 20.9303 5.39198 20.9303 10.7726Z"
+                            stroke="#333333" stroke-width="2" />
+                    </svg>
+                </button>
+
+                <button class="flex head__search_form_close" id="head__search_form-close">
+
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="8.95386" y="7.30435" width="11.6645" height="2.33291"
+                            transform="rotate(45 8.95386 7.30435)" fill="#999999" />
+                        <rect x="7.30432" y="15.5524" width="11.6645" height="2.33291"
+                            transform="rotate(-45 7.30432 15.5524)" fill="#999999" />
+                        <circle cx="12" cy="12" r="11" stroke="#999999" stroke-width="2" />
+                    </svg>
+
+                </button>
+            </form>
+
         </div>
     </header>
 
@@ -214,36 +235,161 @@
                 <h2 class="flex main__how-we-work-title">
                     Как мы&nbsp;работаем
                 </h2>
+                <!-- tabs -->
+                <ul class="flex list-reset main__how_we_work_steps main__tabs_nav">
 
-                <ul class="flex list-reset main__how-we-work-steps">
-                    <li class="flex main__how-we-work-step">
-                        <a href="#">
+                    <li class="flex main__tabs_nav_item"> <button
+                            class="main__how_we_work_step tabs__nav_btn tabs__nav_btn:active" data-path="one">1
+                            шаг</button>
+                        <!-- <a href="#">
                             1 шаг
-                        </a>
+                        </a> -->
                     </li>
 
-                    <li class="flex main__how-we-work-step">
+                    <li class="flex main__tabs_nav_item"> <button class="main__how_we_work_step tabs__nav_btn"
+                            data-path="two">2 шаг</button>
+                    </li>
+
+                    <!-- <li class="flex main__how_we_work_step">
                         <a href="#">
                             2 шаг
                         </a>
-                    </li>
+                    </li> -->
 
-                    <li class="flex main__how-we-work-step">
+                    <li class="flex main__tabs_nav_item"> <button class="main__how_we_work_step tabs__nav_btn"
+                            data-path="two">3 шаг</button>
+                    </li>
+                    <!-- <li class="flex main__how_we_work_step">
                         <a href="#">
                             3 шаг
                         </a>
-                    </li>
+                    </li> -->
 
-                    <li class="flex main__how-we-work-step">
+                    <li class="flex main__tabs_nav_item"> <button
+                            class="main__how_we_work_step tabs__nav_btn tabs__nav_btn" data-path="two">4 шаг</button>
+                    </li>
+                    <!-- <li class="flex main__how_we_work_step">
                         <a href="#">
                             4 шаг
-                        </a>
-
+                        </a> -->
                     </li>
                 </ul>
+
+                <div class="main__tabs_content">
+
+                    <div class="flex main__tabs_item  main__tabs_item:active" data-target="one">
+                        <span class="flex column tab-one">
+                            <h3 class="main__tab_title">
+                                Проводим консультацию
+                            </h3>
+                            <p class="main__tab_text">
+                                Влечет за&nbsp;собой процесс внедрения и&nbsp;модернизации приоритизации разума над
+                                эмоциями.
+                                В&nbsp;рамках спецификации
+                                современных стандартов, некоторые особенности внутренней политики будут объективно
+                                рассмотрены
+                                соответствующими
+                                инстанциями. А&nbsp;также представители современных социальных резервов, инициированные
+                                исключительно
+                                синтетически,
+                                ограничены исключительно образом мышления. Являясь всего лишь частью общей картины,
+                                реплицированные
+                                с&nbsp;зарубежных
+                                источников, современные исследования подвергнуты целой серии независимых исследований.
+                                Кстати,
+                                стремящиеся вытеснить
+                                традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности
+                                картины
+                                в&nbsp;целом, однако
+                                конкретные выводы, разумеется, призваны к&nbsp;ответу.
+                            </p>
+                        </span>
+
+                        <div class="main__how-we-work-img">
+                            <img src="img/how-we-work(x1)_.jpg" alt="dont work">
+                        </div>
+
+                    </div>
+
+                    <div class="flex main__tabs_item" data-target="two">
+                        <span class="flex column tab-two ">
+                            <h3 class="main__tab_title">
+                                Составляем смету
+                            </h3>
+                            <p class="main__tab_text">
+                                Внедрения и&nbsp;модернизации приоритизации разума над эмоциями. В&nbsp;рамках
+                                спецификации современных стандартов,
+                                некоторые особенности внутренней политики будут объективно рассмотрены соответствующими
+                                инстанциями. А&nbsp;также
+                                представители современных социальных резервов, инициированные исключительно
+                                синтетически, ограничены исключительно
+                                образом мышления. Являясь всего лишь частью общей картины, реплицированные
+                                с&nbsp;зарубежных источников, современные
+                                исследования подвергнуты целой серии независимых исследований.
+                            </p>
+                            </span>
+
+                            <div class="main__how-we-work-img">
+                                <img src="img/смета.jpg" alt="dont work">
+                            </div>
+                        
+                    </div>
+
+                    <div class="flex main__tabs_item" data-target="three">
+                        <span class="flex column tab-tree">
+                            <h3 class="main__tab_title">
+                                Привлекаем подрядчиков
+                            </h3>
+                            <p class="main__tab_text">
+                                Идейные соображения высшего порядка, а&nbsp;также новая модель организационной
+                                деятельности требует анализа прогресса
+                                профессионального сообщества. Высокий уровень вовлечения представителей целевой
+                                аудитории является четким
+                                доказательством простого факта: высококачественный прототип будущего проекта напрямую
+                                зависит от&nbsp;дальнейших
+                                направлений развития. Разнообразный и&nbsp;богатый опыт говорит нам, что новая модель
+                                организационной деятельности
+                                говорит о&nbsp;возможностях системы массового участия. Принимая во&nbsp;внимание
+                                показатели успешности, постоянное
+                                информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные
+                                задания по&nbsp;разработке
+                                прогресса профессионального сообщества.
+                            </p>
+                        </span>
+
+                        <div class="main__how-we-work-img">
+                            <img src="img/подряд.jpg" alt="dont work">
+                        </div>
+
+                    </div>
+
+                    <div class="flex main__tabs_item" data-target="four">
+                        <span class="flex column tab-four">
+                            <h3 class="main__tab_title">Инспектируем все этапы работ</h3>
+                            <p class="main__tab_text">
+                                Высокий уровень вовлечения представителей целевой аудитории является четким
+                                доказательством простого факта:
+                                высококачественный прототип будущего проекта напрямую зависит от&nbsp;дальнейших
+                                направлений развития. Разнообразный
+                                и&nbsp;богатый опыт говорит нам, что новая модель организационной деятельности говорит
+                                о&nbsp;возможностях системы
+                                массового участия. Принимая во&nbsp;внимание показатели успешности, постоянное
+                                информационно-пропагандистское
+                                обеспечение нашей деятельности позволяет.
+                            </p>
+                        </span>
+
+                        <div class="main__how-we-work-img">
+                            <img src="img/инсп-этапы-работ.jpg" alt="dont work">
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- ...... -->
             </div>
 
-            <div class="flex main__how-we-work-text-and-img">
+            <!--<div class="flex main__how-we-work-text-and-img">
                 <div class="column">
                     <h2 class="flex main__how-we-work-title-consult">
                         Проводим консультацию
@@ -265,22 +411,22 @@
                         традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины
                         в&nbsp;целом, однако
                         конкретные выводы, разумеется, призваны к&nbsp;ответу.
-                    </p>
+                    </p> -->
 
-                    <div class="flex btn-reset main__how-we-work-buttoms">
-                        <a href="#" class="main__how-we-work-buttom main__how-we-work-buttom-text">
-                            Подробнее
-                        </a>
-                        <a href="#"
-                            class="btn-reset main__how-we-work-buttom main__how-we-work-buttom-right main__how-we-work-buttom-text">
-                            Договор
-                        </a>
-                    </div>
-                </div>
+            <div class="flex btn-reset main__how-we-work-buttoms">
+                <a href="#" class="main__how-we-work-buttom main__how-we-work-buttom-text">
+                    Подробнее
+                </a>
+                <a href="#"
+                    class="btn-reset main__how-we-work-buttom main__how-we-work-buttom-right main__how-we-work-buttom-text">
+                    Договор
+                </a>
+            </div>
+            </div>
 
-                <div>
+            <!-- <div>
                     <img class="flex main__how-we-work-img" src="img/how-we-work(x1)_.jpg" alt="do not work">
-                </div>
+                </div> -->
             </div>
         </section>
 
@@ -509,7 +655,7 @@
 
     </footer>
 
-    <script  src="index.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
