@@ -37,35 +37,70 @@ document.addEventListener('DOMContentLoaded', (e) => {
     })
 })
 
-//табы
 
-// let tabsBtn = document.querySelectorAll('.tabs__nav_btn');
-// let tabItem = document.querySelectorAll('.main__tabs_nav_item');
+/*
+   ТАБЫ
+    */
 
-// tabsBtn.forEach(function (element) {
-//     element.addEventListener('click', function (e) {
-//         const path = e.currentTarget.dataset.path;
+let all_tabs = document.querySelectorAll('.main__tabs_link'); //получаем все табы
+let tab_header = document.querySelector('.main__tab_title') //заголовок таба
+let tab_text = document.querySelector('.main__tab_text') //текст таба
+let tab_img = document.querySelector('.main__how-we-work-img') //картинка таба
 
-//         tabsBtn.forEach(function (btn) { btn.classList.remove('tabs__nav_btn:active') });
-//         e.currentTarget.classList.add('tabs__nav_btn:active');
+//хранилище данных карточек табов
+let tabs_db = {
+    "1 шаг": {
+        "header": "Проводим консультацию",
+        "text": "Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати,  стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.",
+        "img_url": "how-we-work(x1)_.jpg",
+    },
+    "2 шаг": {
+        "header": "Составляем смету",
+        "text": "Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.",
+        "img_url": "img/смета.jpg",
+    },
+    "3 шаг": {
+        "header": "Привлекаем подрядчиков",
+        "text": "Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.",
+        "img_url": "img/подряд.jpg",
+    },
+    "4 шаг": {
+        "header": "Инспектируем все этапы работ",
+        "text": "Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.",
+        "img_url": "img/инсп-этапы-работ.jpg",
+    }
+}
 
-//         tabItem.forEach((element) => { element.classList.remove('main__tabs_item:active') });
-//         document.querySelector('[data-target="${path}"]').classList.add('main__tabs_item:active');
-//     });
-// });
+all_tabs.forEach(function (el) {
+    el.addEventListener('click', function (e) {
+        e.preventDefault();
 
-document.querySelectorAll('.main__tabs_nav_item').forEach(function (tabsBtn) {
-    tabsBtn.addEventListener('click', function (e) {
-        const path = e.currentTarget.dataset.path;
-
-        document.querySelectorAll('.tabs__nav_btn').forEach(function (btn) {
-            btn.classList.remove('tabs__nav_btn:active')
+        // переключаем класс таба - меняем цвет шагов
+        all_tabs.forEach(function (elem) {
+            elem.classList.remove("tab-active");
         });
-            e.currentTarget.classList.add('tabs__nav_btn:active');
+        el.classList.add("tab-active");
 
-        document.querySelectorAll('.main__tabs_item').forEach(function (tabsBtn) {
-            tabsBtn.classList.remove('main__tabs_item:active')
-        });
-            document.querySelector('[data-target="${path}"]').classList.add('main__tabs_item:active');
-        });
+        //меняем данные нашей таб-карточки
+        tab_header.innerText = tabs_db[el.innerText]['header'];
+        tab_text.innerText = tabs_db[el.innerText]['text'];
+        tab_img.style.background = `url(../img/how-we-work(x1)_.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        tab_img.style.backgroundSize = 'cover';
+
+        tab_header.innerText = tabs_db[el.innerText]['header'];
+        tab_text.innerText = tabs_db[el.innerText]['text'];
+        tab_img.style.background = `url(../img/смета.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        tab_img.style.backgroundSize = 'cover';
+
+        tab_header.innerText = tabs_db[el.innerText]['header'];
+        tab_text.innerText = tabs_db[el.innerText]['text'];
+        tab_img.style.background = `url(../img/подряд.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        tab_img.style.backgroundSize = 'cover';
+
+        tab_header.innerText = tabs_db[el.innerText]['header'];
+        tab_text.innerText = tabs_db[el.innerText]['text'];
+        tab_img.style.background = `url(../img/инсп-этапы-работ.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        tab_img.style.backgroundSize = 'cover';
     });
+});
+

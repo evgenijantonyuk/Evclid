@@ -1168,16 +1168,18 @@ body {
 }
 
 .main__how-we-work-img {
-    padding-top: 7px;
-    margin-left: 141px;
-    max-width: 100%;
     width: 870px;
-    height: 460px;
+    max-width: 50%;
 }
+
+.main__how-we-work-buttom-text {
+    letter-spacing: 1.5px;
+}
+
+/* Табы */
 
 .main__tab_title {
     margin: 0;
-    font-style: normal;
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--color-text);
@@ -1186,10 +1188,8 @@ body {
 
 .main__tab_text {
     max-width: 100%;
-    width: 578px;
+    width: 755px;
     margin-bottom: 50px;
-    max-width: 100%;
-    width: 758px;
     font-weight: 400;
     /* font-size: 1rem; */
     font-size: calc(14px + 2 * (100vw / 1770));
@@ -1222,35 +1222,31 @@ body {
     margin-right: 80px;
 }
 
-
-.main__how_we_work_step:active {
-    color: #E1670E;
+.main__tabs {
+    margin-bottom: 45px;
+    font-size: calc(14px + 2 * (100vw / 1770));
 }
 
-.main__how_we_work_step:hover {
+.main__tabs_link:active {
+    color: #F7B045;
+}
+
+.main__tabs_link:hover {
     color: #FF9900;
 }
 
-.main__how_we_work_step:focus {
-    color: #333;
+.main__tabs_link:focus {
+    /* color: #333; */
+    outline: 2px solid #FF9900;
+    outline-offset: 5px;
 }
 
-/* Табы */
-
-.tabs__nav_btn:active {
-    color: yellow;
+.tab-active {
+    color: #FF9900;
 }
 
 .main__tabs_item {
-    display: none;
-}
-
-.main__tabs_item:active {
-    display: block;
-}
-
-.main__how-we-work-buttom-text {
-    letter-spacing: 1.5px;
+    margin-right: 142px;
 }
 
 @media (max-width:3840px) {
@@ -1288,10 +1284,8 @@ body {
 
         .main__how-we-work-img {
             margin: 0;
-            margin-bottom: 80px;
             max-width: 100%;
             width: 924px;
-            height: 650px;
         }
 
         .main__how-we-work-text-and-img {
@@ -1312,7 +1306,7 @@ body {
         .main__how-we-work-img {
             max-width: 100%;
             width: 668px;
-            height: 650px;
+            margin-bottom: 38px;
         }
 
         .main__how-we-work-consult {
@@ -1330,12 +1324,18 @@ body {
             margin-bottom: 60px;
         }
 
+        .main__how-we-work-img {
+            max-width: 100%;
+            width: 583px;
+        }
+
         .main__tabs_nav_item:not(:last-child) {
             margin-right: 35px;
         }
     }
 
     @media (max-width: 320px) {
+        
         .main__tabs_nav_item:not(:last-child) {
             margin-right: 20px;
         }
@@ -1362,9 +1362,7 @@ body {
         }
 
         .main__how-we-work-img {
-            margin: 0;
             margin-bottom: 16px;
-            max-width: 100%;
             width: 290px;
             height: 160px;
         }
