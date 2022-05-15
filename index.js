@@ -45,7 +45,9 @@ document.addEventListener('DOMContentLoaded', (e) => {
 let all_tabs = document.querySelectorAll('.main__tabs_link'); //получаем все табы
 let tab_header = document.querySelector('.main__tab_title') //заголовок таба
 let tab_text = document.querySelector('.main__tab_text') //текст таба
-let tab_img = document.querySelector('.main__how-we-work-img') //картинка таба
+let tab_img = document.querySelector('.main__how-we-work.img img') //картинка таба
+
+
 
 //хранилище данных карточек табов
 let tabs_db = {
@@ -82,15 +84,18 @@ all_tabs.forEach(function (el) {
         el.classList.add("tab-active");
 
         //меняем данные нашей таб-карточки
+
         tab_header.innerText = tabs_db[el.innerText]['header'];
         tab_text.innerText = tabs_db[el.innerText]['text'];
-        tab_img.style.background = `url(../img/how-we-work(x1)_.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        tab_img.src = `url(../img/how-we-work(x1).jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        // tab_img.src = `url(../img/how-we-work(x1).jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
         tab_img.style.backgroundSize = 'cover';
 
         tab_header.innerText = tabs_db[el.innerText]['header'];
         tab_text.innerText = tabs_db[el.innerText]['text'];
-        tab_img.style.background = `url(../img/смета.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
-        tab_img.style.backgroundSize = 'cover';
+        tab_img.src = `url(../img/counts.jpg${tabs_db[el.innerText]['img_url']}) center center no-repeat`;
+        //tab_img.src = 'url(${tabs_db[el.innerText][' + img_url + ']})';
+        tab_img.src.backgroundSize = 'cover';
 
         tab_header.innerText = tabs_db[el.innerText]['header'];
         tab_text.innerText = tabs_db[el.innerText]['text'];

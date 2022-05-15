@@ -107,6 +107,7 @@ body {
 /*head*/
 
 .head {
+    margin: 0 auto;
     position: relative;
     max-width: 100%;
     width: 1920px;
@@ -218,7 +219,7 @@ body {
     background-color: white;
 }
 
-/* кнопка на гл.странице */
+/* кнопка поиска на гл.странице */
 .head__search_icon:focus svg path {
     stroke: #333
 }
@@ -295,7 +296,6 @@ body {
     fill: #333333;
 }
 
-/* ...... */
 
 @media (max-width:3840px) {
     .head {
@@ -367,16 +367,22 @@ body {
         top: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
     }
+    
+
+        /* .close_menu {
+            display: none;
+        } */
 
     .head__list_items {
         display: block;
-        border: 2px solid red;
+        border: 2px solid white;
         padding: 15px;
-        background-color: #7C7C7C;
-        margin-top: 250px;
+        background-color: white;
+        margin-top: 650px;
         max-width: 100%;
-        width: 320px;
-        height: 100%;
+        width: 420px;
+        max-height: 100%;
+        height: 768px;
         transform: translateX(-150%);
         transition: transform 0.5s;
     }
@@ -1168,7 +1174,7 @@ body {
 }
 
 .main__how-we-work-img {
-    width: 870px;
+    /* width: 870px; */
     max-width: 50%;
 }
 
