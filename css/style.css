@@ -367,9 +367,9 @@ body {
         top: 50%;
         transform: translate(-50%, -50%) rotate(-45deg);
     }
-    
 
-        /* .close_menu {
+
+    /* .close_menu {
             display: none;
         } */
 
@@ -493,12 +493,23 @@ body {
     position: relative;
     width: 100%;
     min-height: 620px;
-    background-image: url("../img/photo-of-balconies.jpg");
-    background-repeat: no-repeat;
+    object-fit: cover;
+}
+
+.main__header_text {
+    max-width: 100%;
+    margin-top: 99px;
+    position: absolute;
+    z-index: 999;
+}
+
+.swiper {
+    max-width: 100%;
+    width: 1770px;
+    height: 620px;
 }
 
 .main__header-img-title {
-    margin-top: 99px;
     margin-left: 80px;
     margin-bottom: 24px;
     max-width: 837px;
@@ -525,8 +536,11 @@ body {
     letter-spacing: 1.2px;
 }
 
+.main__btn-text {
+    width: 207px;
+}
+
 .main__header-btn-setting {
-    width: 280px;
     margin-left: 80px;
     padding: 25px 37px;
     font-weight: 700;
@@ -539,7 +553,6 @@ body {
     transition-duration: .3s;
     transition-timing-function: ease;
 }
-
 
 .main__header-btn-setting:focus {
     color: #FFFFFF;
@@ -581,8 +594,7 @@ body {
         background-size: cover;
     }
 
-    .main__header-img-title {
-        padding-top: 57px;
+        .main__header-img-title {
         max-width: 770px;
         height: 146px;
         font-size: 61px;
@@ -607,8 +619,11 @@ body {
         background-size: cover;
     }
 
+    .main__header_text {
+        margin-top: 57px;
+    }
+
     .main__header-img-title {
-        padding-top: 57px;
         max-width: 570px;
         height: 146px;
         font-size: 61px;
@@ -636,9 +651,7 @@ body {
     }
 
     .main__header-img-title {
-        margin: 0;
         margin-left: 40px;
-        padding-top: 160px;
         width: 668px;
         height: 146px;
         font-size: 50px;
@@ -649,7 +662,6 @@ body {
     .main__header-img-text {
         margin: 0;
         margin-left: 40px;
-        margin-top: 120px;
         font-weight: 700;
         font-size: 18px;
         line-height: 22px;
@@ -659,7 +671,7 @@ body {
     .main__header-btn-setting {
         margin: 0;
         margin-left: 40px;
-        margin-top: 120px;
+        margin-top: 20px;
     }
 }
 
@@ -673,12 +685,10 @@ body {
     }
 
     .main__header-img-title {
-        margin: 0;
         margin-left: 22px;
         padding-top: 60px;
         width: 247px;
         font-size: 20px;
-        line-height: 24px;
         letter-spacing: .3px;
     }
 
@@ -693,6 +703,7 @@ body {
     }
 
     .main__btn-text {
+        width: 207px;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
@@ -1174,8 +1185,9 @@ body {
 }
 
 .main__how-we-work-img {
-    /* width: 870px; */
     max-width: 50%;
+    width: 870px;
+    height: 460px;
 }
 
 .main__how-we-work-buttom-text {
@@ -1268,7 +1280,11 @@ body {
 
     @media (max-width: 1770px) {
         .main__how-we-work {
-            width: 100%;
+            max-width: 75%;
+        }
+
+        .main__how-we-work-text-and-img {
+            flex-direction: column-reverse;
         }
     }
 
@@ -1277,25 +1293,12 @@ body {
             width: 100%;
         }
 
-        .main__how-we-work-consult {
-            margin: 0;
-            margin-bottom: 25px;
-            max-width: 100%;
-            width: 437px;
-        }
-
         .main__tabs_nav_item:not(:last-child) {
             margin-right: 155px;
         }
 
-        .main__how-we-work-img {
-            margin: 0;
+        .main__how-we-work {
             max-width: 100%;
-            width: 924px;
-        }
-
-        .main__how-we-work-text-and-img {
-            flex-direction: column-reverse;
         }
 
         .main__how-we-work-buttoms {
@@ -1309,14 +1312,12 @@ body {
             width: 100%;
         }
 
-        .main__how-we-work-img {
-            max-width: 100%;
+        .img__adaptive {
             width: 668px;
-            margin-bottom: 38px;
         }
 
-        .main__how-we-work-consult {
-            max-width: 100%;
+        .main__tab_text {
+            max-width: 640px;
         }
     }
 
@@ -1330,9 +1331,12 @@ body {
             margin-bottom: 60px;
         }
 
-        .main__how-we-work-img {
-            max-width: 100%;
-            width: 583px;
+        .main__tab_text {
+            max-width: 640px;
+        }
+
+        .img__adaptive {
+            width: 650px;
         }
 
         .main__tabs_nav_item:not(:last-child) {
@@ -1341,7 +1345,7 @@ body {
     }
 
     @media (max-width: 320px) {
-        
+
         .main__tabs_nav_item:not(:last-child) {
             margin-right: 20px;
         }
@@ -1353,24 +1357,12 @@ body {
             line-height: 29px;
         }
 
-        .main__how-we-work-title-consult {
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 32px;
+        .main__tab_text {
+            width: 290px;
         }
 
-        .main__how-we-work-consult {
-            width: 290px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 28px;
-        }
-
-        .main__how-we-work-img {
-            margin-bottom: 16px;
-            width: 290px;
-            height: 160px;
+        .img__adaptive {
+            width: 300px;
         }
 
         .main__how-we-work-buttoms {

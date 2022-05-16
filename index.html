@@ -8,6 +8,8 @@
     <title>Evclid</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
     <base target="_blank">
 </head>
 
@@ -109,7 +111,47 @@
 
         <section class="container">
             <div class="main__header-img">
-                <div class="flex column">
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper flex">
+                        <!-- Slides -->
+                        
+                            <div class="column main__header_text">
+                                <h2 class="main__header-img-title">
+                                    Проектные решения любой сложности
+                                </h2>
+                                <span class="main__header-img-text">
+                                    Есть над чем задуматься: базовые сценарии поведения пользователей и&nbsp;по&nbsp;сей
+                                    день
+                                    остаются
+                                    уделом
+                                    проектантов
+                                </span>
+                                <a href="#" class="btn-reset main__header-btn-setting main__btn-text">Заказать
+                                    расчет</a>
+                            </div>
+                        <div class="swiper-slide"><img src="img/photo-of-balconies.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide"><img src="img/swiper2.jpg" alt="">
+                        </div>
+
+                        <div class="swiper-slide"><img src="img/swiper3.jpg" alt="">
+                        </div>
+
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                    <!-- If we need scrollbar -->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <!-- <div class="flex column">
                     <h2 class="flex main__header-img-title">
                         Проектные решения любой сложности
                     </h2>
@@ -119,12 +161,8 @@
                         уделом
                         проектантов
                     </span>
-                    <!-- <button class="btn-reset main__header-btn-setting">Заказать расчёт</button> -->
-                    <!-- <img class="main__img" src="img/photo-of-balconies.jpg" alt="do not work"> -->
-
                     <a href="#" class="btn-reset main__header-btn-setting main__btn-text">Заказать расчет</a>
-                </div>
-            </div>
+                </div> -->
         </section>
 
         <section id="about-us" class="container">
@@ -256,7 +294,7 @@
 
                 </ul>
 
-                <div class="flex main__tabs_content">
+                <div class="flex main__tabs_content main__how-we-work-text-and-img">
 
                     <div class="column main__tabs_item">
 
@@ -297,16 +335,13 @@
                         </div>
                     </div>
                     <div class="main__how-we-work-img flex">
-                        <img src="img/how-we-work(x1).jpg" alt="dont work">
+                        <img class="img__adaptive" src="img/tab1.jpg" alt="dont work">
                     </div>
-
+                </div>
         </section>
 
-
-
-
-        <section id="main__faq" class="container">
-            <div class="main__faq">
+        <section id="main__faq">
+            <div class="main__faq container">
                 <h2 class="flex main__faq-title">
                     Часто задаваемые вопросы
                 </h2>
@@ -531,6 +566,12 @@
     </footer>
 
     <script src="index.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper(...)
+    </script>
 </body>
 
 </html>
