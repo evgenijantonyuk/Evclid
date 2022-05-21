@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
-    <link rel="stylesheet" href="libs/accordion.min.css">
     <base target="_blank">
 </head>
 
@@ -32,32 +31,32 @@
                 <span></span>
             </div>
 
-            <nav class="flex head__list">
+            <nav class="flex head__list head__list_items">
 
-                <ul class="flex list-reset head__list_items">
+                <ul class="flex list-reset">
 
-                    <li class="head__list-item">
+                    <li class="head__list_item">
                         <a href="#about-us">
                             О нас</a>
                     </li>
 
-                    <li class="head__list-item">
+                    <li class="head__list_item">
                         <a href="#projects">
                             Проекты
                         </a>
                     </li>
 
-                    <li class="head__list-item">
+                    <li class="head__list_item">
                         <a href="#stadies">
                             Этапы</a>
                     </li>
 
-                    <li class="head__list-item" id="open_search_form">
+                    <li class="head__list_item" id="open_search_form">
                         <a href="#feedback">
                             Отзывы</a>
                     </li>
 
-                    <li class="head__list-item">
+                    <li class="head__list_item">
                         <a href="#contacts">
                             Контакты
                         </a>
@@ -344,12 +343,15 @@
                     <h3 class="accordion__title flex">Из&nbsp;чего
                         формируется
                         конечная стоимость проекта?
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
-                                fill="#666666" />
-                        </svg>
+                        <!-- <div class="ac__circle-label flex"> -->
+                            <svg width="50" height="50" viewBox="0 0 50 50" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                                    fill="#666666" />
+                            </svg>
+                        <!-- </div> -->
                     </h3>
 
                     <div class="tabs__text" id="tabs-1">
@@ -542,6 +544,9 @@
             </div>
         </section>
 
+        <!-- accordion_2_variants -->
+
+
     </main>
 
     <footer class="flex footer__main-content container">
@@ -661,7 +666,6 @@
         </div>
 
     </footer>
-
 
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="scripts.js"></script>

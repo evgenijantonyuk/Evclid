@@ -5,6 +5,7 @@ let burger = document.querySelector(".burger");
 let head__list_items = document.querySelector(".head__list_items");
 
 
+
 burger.addEventListener("click", function () {
     burger.classList.toggle("active");
     head__list_items.classList.toggle("active");
@@ -161,3 +162,6 @@ function hideAll() {
 function showText(textEl) {
     textEl.style.height = textEl.scrollHeight + 'px';
 }
+
+// accordion_2_variants
+
