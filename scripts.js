@@ -4,11 +4,14 @@ let burger = document.querySelector(".burger");
 
 let head__list_items = document.querySelector(".head__list_items");
 
+//let head__list = document.querySelector(".head__list");
+
 
 
 burger.addEventListener("click", function () {
     burger.classList.toggle("active");
     head__list_items.classList.toggle("active");
+    //head__list.classList.toggle("active");
 })
 
 //всплывающее поле поиска
@@ -164,4 +167,6 @@ function showText(textEl) {
 }
 
 // accordion_2_variants
+
+
 

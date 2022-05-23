@@ -332,7 +332,6 @@ body {
         min-width: 50px;
         height: 30px;
         position: relative;
-        /* overflow: hidden; */
     }
 
     .burger span {
@@ -370,14 +369,30 @@ body {
 
     .head__list_items.active {
         max-width: 100%;
+        position: absolute;
+        top: 10px;
+        left: 30px;
         width: 420px;
-        height: 768px;
+        height: 668px;
         transform: translateX(0);
         display: block;
         flex-direction: column;
         border: 2px solid white;
         margin-top: 80px;
         background-color: white;
+    }
+
+    nav {
+        position: absolute;
+        top: 98px;
+        left: 30px;
+    }
+
+    .burger__ul {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: block;
     }
 
     .head__list_item {
@@ -436,8 +451,7 @@ body {
     .head__list_items {
         margin: 0 auto;
         display: absolut;
-        right: 0;
-        margin-top: 350px;
+        left: 0;
         max-width: 100%;
     }
 }
@@ -465,6 +479,7 @@ body {
         text-align: center;
         max-width: 100%;
         width: 300px;
+        left: 0;
     }
 }
 
@@ -1388,7 +1403,6 @@ body {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    /* border: none; */
     padding: 39px 0;
     font-weight: 700;
     font-style: normal;
@@ -1413,15 +1427,17 @@ body {
     transform: rotate(45deg);
 }
 
-/* .accordion__title:active svg {
-    transition: trnasform 1s ease;
-} */
+.accordion__title:hover svg {
+    transform: rotate(45deg);
+}
 
 .accordion__title:active svg {
     transform: rotate(45deg);
 }
 
 /* accordion_2_variants */
+
+
 /* .... */
 
 .main__faq-title {
