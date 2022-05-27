@@ -129,7 +129,8 @@ body {
   align-self: center;
   justify-items: flex-start;
   max-width: 100%;
-    background-repeat: no-repeat; */
+  background-repeat: no-repeat;
+  */
 }
 
 .head__burger-input {
@@ -1279,6 +1280,10 @@ body {
 @media (max-width: 1770px) {
   .main__how-we-work {
     max-width: 75%;
+  }
+
+  .main__how-we-work-img {
+    margin-bottom: 50px;
   }
 
   .main__how-we-work-text-and-img {
